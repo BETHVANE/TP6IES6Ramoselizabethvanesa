@@ -1,20 +1,20 @@
 package ar.edu.ies6.util;
 
-import java.util.ArrayLits;
+import java.util.ArrayList;
 import java.util.List;
 import ar.edu.ies6.model.Alumno;
 
 
 public class Listadodealumnos {
-	private static List <Alumno> Listado= new ArrayLits<> ();
+	private static List <Alumno> listado = new ArrayList<>();
 	public Listadodealumnos() {
 		// TODO Auto-generated constructor stub
 	}
 	public static List<Alumno> getListado() {
-		return Listado;
+		return listado;
 	}
 	public static void setListado(List<Alumno> listado) {
-		Listado = listado;
+		Listadodealumnos.listado = listado;
 	}
 	
 	

@@ -1,7 +1,11 @@
 package ar.edu.ies6.controller;
 
 import ar.edu.ies6.model.Alumno;
+import ar.edu.ies6.util.Listadodealumnos;
+
 import java.time.LocalDate;
+
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,8 +13,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.edu.ies6.model.*;
+
  
+
+
 @Controller
 public class Alumnocontroller {
 	@GetMapping({"/index","/","home","/alumno"})
@@ -29,8 +35,9 @@ public class Alumnocontroller {
 		@PostMapping("/cargarAlumno")
 		public ModelAndView cargarAlumno(@ModelAttribute("Alumno")Alumno alumno) {
 			
+			Listadodealumnos.getListado().add(alumno);
 			ModelAndView modelView=new ModelAndView("listadodealumno");
-		modelView.addObject("listadodealumno", listado);
+		modelView.addObject("listado", Listadodealumnos.getListado());
 			return modelView;
 		}
 		
@@ -38,6 +45,4 @@ public class Alumnocontroller {
 
 	
 	
-	
-	
-}
+
