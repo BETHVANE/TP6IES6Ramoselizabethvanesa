@@ -12,16 +12,16 @@
 <h2> Carga de ALUMNOS</h2>
 	<div>
 		<form th: object="$ {alumno}" th:action="@ {/cargarAlumno"method="post">
-			<label class="form-label for="nombre">Nombre:</label>
+			<label class="form-label" for="nombre">Nombre:</label>
 			<input class="form-control" type="text"id="nombre"th:field="*{name}"><br>
-			<label class="form-label for="apellido">Apellido:</label>
+			<label class="form-label" for="apellido">Apellido:</label>
 			<input class="form-control" type="text"id="apellido"th:field="*{lastName}"><br>
-			<label class="form-label for="direccionCalle">Direccion Calle:</label>
+			<label class="form-label" for="direccionCalle">Direccion Calle:</label>
 			<input class="form-control" type="text"id="direccionCalle"th:field="*{addressStreet}"><br>
-			<label class="form-label for="direccionNumero">Direccion Numero:</label>
+			<label class="form-label" for="direccionNumero">Direccion Numero:</label>
 			<input class="form-control" type="number"id="direccionNumero"th:field="*{addressNumber}"><br>
-			<label class="form-label for="fechaNacimiento">Fecha de Nacimiento:</label>
-			<input class="form-control" type="date"id="fechaNacimiento"th:field="*{fechaNacimiento}"><br>
+			<label class="form-label" for="fechaNac">Fecha de Nacimiento:</label>
+			<input class="form-control" type="date"id="fechaNac"th:field="*{fechaNac}"><br>
 			<label for="estado">Estado:</label>
 			<input type="checkbox"id="estado" th:field="*{estado}"><br> 
 			<input type="submit"value="Cargar Alumno">

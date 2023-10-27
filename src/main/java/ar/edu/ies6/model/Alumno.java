@@ -10,7 +10,7 @@ public class Alumno {
 	private String addressStreet;
 	private String addressNumber;
 	private LocalDate fechaNac;
-	private boolean estado;
+	private Boolean estado;
 	
 public Alumno() {
 	// TODO Auto-generated constructor stub
